@@ -1,7 +1,5 @@
-n = 5  # number of rows
+def inverted_pyramid(rows):
+    for i in range(1, rows + 1):
+        print(" " * (i - 1) + (f"{i} " * (rows - i + 1)).strip())
 
-for i in range(n, 0, -1):
-    print(' ' * (n - i), end='')  # print spaces
-    for j in range(1, i + 1):
-        print(j, end=' ')
-    print()
+inverted_pyramid(5)
