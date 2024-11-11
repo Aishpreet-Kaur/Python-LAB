@@ -50,7 +50,7 @@ The winner takes all the cards in play; if there's another tie, the war continue
     1. Define Constants: Define card suits and ranks, and assign values (e.g., 2–10, Jack = 11, Queen = 12, etc.).
     2. Create Card, Deck, and Player classes.
     3. Shuffle and Deal: Shuffle the deck and split it between the players.
-    4. 4. Main Game Loop:
+    4. Main Game Loop:
     Players draw cards and compare.
     If there’s a war, draw additional cards as required by the rules.
     5. Check for Winner: The game ends when one player has all the cards.
@@ -68,4 +68,14 @@ Add custom player names, or allow multiple games and track wins.
 Create a visualization or text-based interface for rounds.
 
 
+5.UI:
+    Text-based: No extra libraries needed, use Python’s built-in input() and print() functions.
+    Graphical: Use Tkinter (lightweight) or Pygame (more advanced).
 
+6.Backend/Storage:
+    File-based: Use JSON (easy, readable) or Pickle (more Python-specific).
+    Database: Use SQLite for lightweight, persistent storage of game data.
+
+7.Libraries:
+    Standard: Python's random module for shuffling.
+    Optional: unittest for testing, Matplotlib for stats visualizations
