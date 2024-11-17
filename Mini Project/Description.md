@@ -68,14 +68,35 @@ Add custom player names, or allow multiple games and track wins.
 Create a visualization or text-based interface for rounds.
 
 
-5.UI:
-    Text-based: No extra libraries needed, use Python’s built-in input() and print() functions.
-    Graphical: Use Tkinter (lightweight) or Pygame (more advanced).
+5.Libraries Used
+   1.random:Used to shuffle the deck of cards in the Deck class.
+   2.tkinter:A Python standard library for building graphical user interfaces (GUIs).
+   3.messagebox from tkinter:Used to display pop-up messages for errors or game-over announcements.
 
-6.Backend/Storage:
-    File-based: Use JSON (easy, readable) or Pickle (more Python-specific).
-    Database: Use SQLite for lightweight, persistent storage of game data.
+6.UI (Frontend)
+    1.tkinter:All UI components are built using tkinter.
+    2.Key UI elements:
+        Frames: Used to organize the layout (e.g., main menu vs. gameplay screen).
+        Labels: Display static text (like "Player 1 Card") and dynamic content (like card names and results).
+        Buttons: Allow players to start the game, play the next round, and restart the game.
+        Entry Fields: For players to input their names.
+        Styled Card Display: Cards are represented as Labels with a white background to simulate card visuals.
+        Dynamic Updates: Labels update after every round to show the current card and results dynamically.
 
-7.Libraries:
-    Standard: Python's random module for shuffling.
-    Optional: unittest for testing, Matplotlib for stats visualizations
+
+7.Backend
+    1.Core Game Logic:
+        Card Class: Represents a single card with a suit, rank, and value.
+        Deck Class: Handles the creation of the deck and shuffling.
+        Player Class: Manages each player's card stack.
+        WarGame Class: Implements the core rules of the "War" card game, including tie resolution and determining winners.
+    2.Game State Management:
+        Game progress (rounds, winners, and remaining cards) is tracked by the WarGame class.
+        The backend sends results to the UI for display after every round.
+    3.Game Flow:
+        Players input their names, and the deck is distributed evenly.
+        The play_round() method handles each round:
+        Compares cards.
+        Allocates cards to the winner.
+        Handles ties (simulating "war").
+        The game ends when one player has all the cards or a set number of rounds is reached.    
