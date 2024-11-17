@@ -2,7 +2,7 @@ import random
 import tkinter as tk
 from tkinter import messagebox
 
-# Backend Code (No Changes)
+# Backend Code 
 suits = ('Hearts', 'Diamonds', 'Spades', 'Clubs')
 ranks = ('Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Jack', 'Queen', 'King', 'Ace')
 values = {'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 
@@ -73,7 +73,7 @@ class WarGame:
             self.player_two.add_cards([player_one_card, player_two_card])
             winner = self.player_two.name
         else:
-            winner = "Tie"
+            winner = "War"
 
         return (player_one_card, player_two_card, winner)
 
@@ -87,7 +87,7 @@ class WarGame:
         else:
             return "Game Over! It's a tie!"
 
-# UI Code (Updated)
+# UI Code
 class WarGameApp:
     def __init__(self, root):
         self.root = root
@@ -140,7 +140,7 @@ class WarGameApp:
         self.next_round_button = tk.Button(self.gameplay_frame, text="Next Round", font=("Arial", 14), bg="#006400", fg="white", command=self.play_round)
         self.next_round_button.pack(pady=10)
 
-        self.restart_button = tk.Button(self.gameplay_frame, text="Restart Game", font=("Arial", 14), bg="#800000", fg="white", command=self.restart_game)
+        self.restart_button = tk.Button(self.gameplay_frame, text="Restart Game", font=("Arial", 14), bg="yellow", fg="white", command=self.restart_game)
         self.restart_button.pack(pady=10)
         self.restart_button.config(state=tk.DISABLED)
 
