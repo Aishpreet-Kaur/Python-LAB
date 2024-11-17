@@ -69,11 +69,13 @@ Create a visualization or text-based interface for rounds.
 
 
 5.Libraries Used
-   1.random:Used to shuffle the deck of cards in the Deck class.
-   2.tkinter:A Python standard library for building graphical user interfaces (GUIs).
-   3.messagebox from tkinter:Used to display pop-up messages for errors or game-over announcements.
+
+    1.random:Used to shuffle the deck of cards in the Deck class.
+    2.tkinter:A Python standard library for building graphical user interfaces (GUIs).
+    3.messagebox from tkinter:Used to display pop-up messages for errors or game-over announcements.
 
 6.UI (Frontend)
+
     1.tkinter:All UI components are built using tkinter.
     2.Key UI elements:
         Frames: Used to organize the layout (e.g., main menu vs. gameplay screen).
@@ -85,6 +87,7 @@ Create a visualization or text-based interface for rounds.
 
 
 7.Backend
+
     1.Core Game Logic:
         Card Class: Represents a single card with a suit, rank, and value.
         Deck Class: Handles the creation of the deck and shuffling.
