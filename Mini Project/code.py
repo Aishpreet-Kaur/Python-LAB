@@ -87,7 +87,7 @@ class WarGame:
         else:
             return "Game Over! It's a tie!"
 
-# UI Code
+# UI Code 
 class WarGameApp:
     def __init__(self, root):
         self.root = root
@@ -140,9 +140,6 @@ class WarGameApp:
         self.next_round_button = tk.Button(self.gameplay_frame, text="Next Round", font=("Arial", 14), bg="#006400", fg="white", command=self.play_round)
         self.next_round_button.pack(pady=10)
 
-        self.restart_button = tk.Button(self.gameplay_frame, text="Restart Game", font=("Arial", 14), bg="yellow", fg="white", command=self.restart_game)
-        self.restart_button.pack(pady=10)
-        self.restart_button.config(state=tk.DISABLED)
 
     def start_game(self):
         player_one_name = self.player_one_entry.get()
@@ -160,7 +157,6 @@ class WarGameApp:
         self.status_label.config(text=f"{player_one_name} vs {player_two_name}")
         self.result_label.config(text="Result: None")
         self.next_round_button.config(state=tk.NORMAL)
-        self.restart_button.config(state=tk.DISABLED)
 
     def play_round(self):
         if not self.game:
@@ -181,14 +177,9 @@ class WarGameApp:
             self.player_one_card_display.config(text=str(player_one_card))
             self.player_two_card_display.config(text=str(player_two_card))
 
-    def restart_game(self):
-        self.game = None
-        self.gameplay_frame.pack_forget()
-        self.main_frame.pack()
-
-
 # Main loop to run the UI
 if __name__ == "__main__":
     root = tk.Tk()
     app = WarGameApp(root)
     root.mainloop()
+
