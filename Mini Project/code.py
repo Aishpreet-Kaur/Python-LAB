@@ -168,7 +168,6 @@ class WarGameApp:
             self.result_label.config(text=result)
             messagebox.showinfo("Game Over", result)
             self.next_round_button.config(state=tk.DISABLED)
-            self.restart_button.config(state=tk.NORMAL)
         else:
             player_one_card, player_two_card, winner = result
             self.result_label.config(text=f"Player 1: {player_one_card} vs Player 2: {player_two_card}. Winner: {winner}")
