@@ -73,7 +73,7 @@ class WarGame:
             self.player_two.add_cards([player_one_card, player_two_card])
             winner = self.player_two.name
         else:
-            winner = "War"
+            winner = "Tie"
 
         return (player_one_card, player_two_card, winner)
 
